@@ -12,6 +12,37 @@ This is the single most important rule:
 
 ---
 
+## 0. Deliverable: a fully clickable prototype
+
+This phase has **no real backend**. What you deliver is a **working, clickable prototype** — the
+whole app must feel real, driven entirely by **mock data**:
+
+- ✅ **Clickable** — every button, row, card, tab, and link does something. Nothing is dead.
+- ✅ **Navigation works** — all flows connect end to end (auth → onboarding → home → trips →
+  evidence → settings → subscription), with correct back behavior, tabs, and modals/sheets.
+- ✅ **States change** — toggles flip, forms validate, selections persist, lists filter/sort,
+  Protection ON/OFF updates the UI, a new "session" appears after a simulated drive, etc.
+- ✅ **Realistic data states** — every data screen shows **loading → empty → error → content**,
+  not just the happy path. Use small simulated delays so loading is visible.
+- ✅ **Mocked like the real thing** — build behind a **service/mock layer** that mimics how the
+  app will talk to the backend later (async functions returning the mock data, with latency and
+  occasional error). When the real API arrives, only that layer is swapped — **screens and
+  navigation must not change.**
+
+> Think of it as a **functional demo you could hand to a stakeholder and actually tap through** —
+> indistinguishable from the finished app except that the data is mocked.
+
+### How to mock (so backend swap is trivial)
+
+- Use the demo's mock data in `uix-design/src/data/` as your source data; port it into the client.
+- Put mocks behind the existing service/query layer, e.g. feature `services/` +
+  `@/shared/services/api/...`, exposing **async** functions (`await getTrips()`), not inline
+  constants — so screens already `await` data as they will with the API.
+- Add artificial latency + a way to simulate errors so loading/error states are reachable.
+- Keep mock wiring isolated (a `mock`/`fixtures` module per feature) so it's removed in one place.
+
+---
+
 ## 1. The two sides
 
 | | `uix-design/` (the design) | `client/DriveShield/` (what you build) |
@@ -173,6 +204,12 @@ locally — no backend is required for this phase.
 A screen is done when:
 
 - [ ] Side-by-side with the demo it is visually identical (layout, spacing, colors, typography).
+- [ ] **Clickable** — every interactive element does something; nothing is dead.
+- [ ] **Navigation works** — all links/buttons route correctly, back behavior matches the demo.
+- [ ] **States change** — toggles/forms/selection/filters update the UI and persist as expected.
+- [ ] **All data states** present — loading → empty → error → content (driven by the mock layer).
+- [ ] **Mocked via the service layer** — data comes from async mock functions, not inline
+      constants, so the real API can be swapped in without touching the screen.
 - [ ] **No raw values** — every color/space/radius/font comes from `useTheme()` tokens.
 - [ ] **No hardcoded strings** — all visible text via `useT()` / locales.
 - [ ] Reuses shared UI Kit components — no duplicated markup.
