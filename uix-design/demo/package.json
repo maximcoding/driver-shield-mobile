@@ -11,9 +11,9 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4",
+    "@vitejs/plugin-react": "^6",
     "eslint": "^8",
     "eslint-plugin-jsx-a11y": "^6",
-    "vite": "^5"
+    "vite": "^8"
   }
 }
