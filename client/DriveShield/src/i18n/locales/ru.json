@@ -1,0 +1,86 @@
+{
+  "common": {
+    "error_title": "Что-то пошло не так",
+    "error_hint": "Произошла непредвиденная ошибка. Попробуйте ещё раз.",
+    "retry": "Попробовать снова",
+    "offline_banner": "Нет соединения. Отображаются кэшированные данные.",
+    "loading": "Загрузка…"
+  },
+  "auth": {
+    "a11y_toggle_theme": "Переключить тему оформления",
+    "welcome": "С возвращением",
+    "subtitle": "Войдите, чтобы продолжить",
+    "mock_demo_hint": "Демо: поля заполнены — нажмите «Войти» (mock API).",
+    "or": "ИЛИ",
+    "email": "Email",
+    "email_placeholder": "you@example.com",
+    "password": "Пароль",
+    "forgot_password": "Забыли?",
+    "password_placeholder": "••••••••",
+    "signing_in": "Входим…",
+    "sign_in": "Войти",
+    "no_account": "Нет аккаунта?",
+    "sign_up": "Зарегистрироваться",
+    "terms_prefix": "Продолжая, вы принимаете наши",
+    "terms_of_service": "Условия использования",
+    "and": "и",
+    "privacy_policy": "Политику конфиденциальности"
+  },
+  "home": {
+    "stat_done": "Готово",
+    "stat_active": "Активно",
+    "stat_streak": "Серия",
+    "featured_title": "Дневная цель",
+    "featured_subtitle": "Отличная работа — не останавливайтесь на достигнутом.",
+    "quick_actions": "Быстрые действия",
+    "overview": "Обзор",
+    "recent_activity": "Топ статей",
+    "title": "Главная",
+    "greeting_morning": "Доброе утро",
+    "greeting_afternoon": "Добрый день",
+    "greeting_evening": "Добрый вечер",
+    "quick_action_task": "Новая задача",
+    "quick_action_message": "Сообщение",
+    "quick_action_schedule": "Расписание",
+    "quick_action_report": "Отчёт",
+    "quick_action_upload": "Загрузить"
+  },
+  "settings": {
+    "language": {
+      "label": "Язык",
+      "english": "Английский",
+      "russian": "Русский",
+      "german": "Немецкий"
+    },
+    "title": "Настройки",
+    "appearance": "Оформление",
+    "theme": "Тема",
+    "about": "О приложении",
+    "version": "Версия",
+    "logout": "Выйти",
+    "theme_light": "Светлая",
+    "theme_dark": "Тёмная",
+    "theme_system": "Системная"
+  },
+  "onboarding": {
+    "headline": "Всё необходимое\nв одном месте.",
+    "tagline": "Быстро, надёжно и красиво оформлено.",
+    "feature_1_title": "Работает офлайн",
+    "feature_1_body": "Работает без подключения к интернету",
+    "feature_2_title": "Защита по умолчанию",
+    "feature_2_body": "Данные зашифрованы от начала до конца",
+    "feature_3_title": "Молниеносная скорость",
+    "feature_3_body": "Мгновенная синхронизация на всех устройствах",
+    "get_started": "Начать"
+  },
+  "uikit": {
+    "title": "Компоненты",
+    "section_buttons": "Кнопки",
+    "section_typography": "Типографика",
+    "section_icons": "Иконки",
+    "section_surfaces": "Поверхности и состояния"
+  },
+  "app": {
+    "title": "Приложение"
+  }
+}

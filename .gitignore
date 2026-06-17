@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Env / secrets
+.env
+*.local
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.*
+yarn-error.*
+
+# React Native / iOS
+client/DriveShield/ios/Pods/
+client/DriveShield/ios/build/
+**/DerivedData/
+*.xcuserstate
+
+# React Native / Android
+client/DriveShield/android/build/
+client/DriveShield/android/.gradle/
+client/DriveShield/android/.cxx/
+client/DriveShield/android/app/build/
+client/DriveShield/android/app/.cxx/
+*.keystore
+!debug.keystore
+
+# Metro / RN caches
+.metro-health-check*
+.haste_cache/
+
+# Vite / web demo
+uix-design/demo/dist/
+dist/
+
+# Test coverage
+coverage/

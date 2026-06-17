@@ -1,0 +1,21 @@
+{
+  "extends": "@react-native/typescript-config",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-native",
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@assets/*": ["assets/*"]
+    }
+  },
+  "include": [
+    "App.tsx",
+    "src",
+    "assets",
+    "scripts",
+    "src/shared/types",
+    "types"
+  ],
+  "exclude": ["node_modules", "Pods"]
+}

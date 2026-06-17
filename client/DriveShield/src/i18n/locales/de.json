@@ -1,0 +1,86 @@
+{
+  "common": {
+    "error_title": "Etwas ist schiefgelaufen",
+    "error_hint": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es erneut.",
+    "retry": "Erneut versuchen",
+    "offline_banner": "Kein Internet. Gecachte Daten werden angezeigt.",
+    "loading": "Laden…"
+  },
+  "auth": {
+    "a11y_toggle_theme": "Farbschema umschalten",
+    "welcome": "Willkommen zurück",
+    "subtitle": "Melde dich an, um fortzufahren",
+    "mock_demo_hint": "Demo: Felder sind vorausgefüllt — auf Anmelden tippen (Mock-API).",
+    "or": "ODER",
+    "email": "E-Mail",
+    "email_placeholder": "du@beispiel.de",
+    "password": "Passwort",
+    "forgot_password": "Vergessen?",
+    "password_placeholder": "••••••••",
+    "signing_in": "Anmelden…",
+    "sign_in": "Anmelden",
+    "no_account": "Noch kein Konto?",
+    "sign_up": "Registrieren",
+    "terms_prefix": "Mit der Fortfahren stimmst du unseren",
+    "terms_of_service": "Nutzungsbedingungen",
+    "and": "und der",
+    "privacy_policy": "Datenschutzrichtlinie"
+  },
+  "home": {
+    "stat_done": "Erledigt",
+    "stat_active": "Aktiv",
+    "stat_streak": "Serie",
+    "featured_title": "Tagesziel",
+    "featured_subtitle": "Du machst das super — halte deinen Streak aufrecht.",
+    "quick_actions": "Schnellaktionen",
+    "overview": "Übersicht",
+    "recent_activity": "Top-Storys",
+    "title": "Startseite",
+    "greeting_morning": "Guten Morgen",
+    "greeting_afternoon": "Guten Tag",
+    "greeting_evening": "Guten Abend",
+    "quick_action_task": "Neue Aufgabe",
+    "quick_action_message": "Nachricht",
+    "quick_action_schedule": "Planen",
+    "quick_action_report": "Bericht",
+    "quick_action_upload": "Hochladen"
+  },
+  "settings": {
+    "language": {
+      "label": "Sprache",
+      "english": "Englisch",
+      "russian": "Russisch",
+      "german": "Deutsch"
+    },
+    "title": "Einstellungen",
+    "appearance": "Darstellung",
+    "theme": "Design",
+    "about": "Info",
+    "version": "Version",
+    "logout": "Abmelden",
+    "theme_light": "Hell",
+    "theme_dark": "Dunkel",
+    "theme_system": "System"
+  },
+  "onboarding": {
+    "headline": "Alles, was du brauchst,\nan einem Ort.",
+    "tagline": "Schnell, zuverlässig und wunderschön gestaltet.",
+    "feature_1_title": "Offline-fähig",
+    "feature_1_body": "Funktioniert auch ohne Internetverbindung",
+    "feature_2_title": "Standardmäßig sicher",
+    "feature_2_body": "Deine Daten sind Ende-zu-Ende verschlüsselt",
+    "feature_3_title": "Blitzschnell",
+    "feature_3_body": "Sofortige Synchronisierung auf allen Geräten",
+    "get_started": "Loslegen"
+  },
+  "uikit": {
+    "title": "Komponenten",
+    "section_buttons": "Schaltflächen",
+    "section_typography": "Typografie",
+    "section_icons": "Icons",
+    "section_surfaces": "Oberflächen & Zustände"
+  },
+  "app": {
+    "title": "App"
+  }
+}

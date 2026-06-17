@@ -1,0 +1,68 @@
+// src/navigation/helpers/use-back-handler.ts
+import type { NavigationState, PartialState } from '@react-navigation/native'
+import { useEffect, useRef } from 'react'
+import { BackHandler, Platform } from 'react-native'
+import { navigationRef } from '@/navigation/helpers/navigation-helpers'
+
+/**
+ * Android back button handler.
+ * canExit(routeName) → true if the app can exit from that route.
+ */
+export function useBackButtonHandler(
+  canExit: (routeName: string | undefined) => boolean,
+) {
+  // keep latest canExit without re-subscribing
+  const canExitRef = useRef(canExit)
+  useEffect(() => {
+    canExitRef.current = canExit
+  }, [canExit])
+
+  useEffect(() => {
+    // iOS: do nothing, but hooks are still called (no early return)
+    if (Platform.OS !== 'android') return
+
+    const onBackPress = () => {
+      if (!navigationRef.isReady()) return false
+
+      const state = navigationRef.getRootState()
+      const routeName = getActiveRouteNameSafe(state)
+
+      // allow exiting app on specific root screens
+      if (canExitRef.current(routeName)) {
+        BackHandler.exitApp()
+        return true
+      }
+
+      // otherwise pop navigation if possible
+      if (navigationRef.canGoBack()) {
+        navigationRef.goBack()
+        return true
+      }
+
+      return false
+    }
+
+    // new RN API: subscription.remove()
+    const subscription = BackHandler.addEventListener(
+      'hardwareBackPress',
+      onBackPress,
+    )
+
+    return () => {
+      subscription.remove()
+    }
+  }, [])
+}
+
+function getActiveRouteNameSafe(
+  state: NavigationState | PartialState<NavigationState> | undefined,
+): string | undefined {
+  if (!state?.routes || state.index === undefined) return undefined
+  const route = state.routes[state.index]
+  if (!route) return undefined
+  if (route.state)
+    return getActiveRouteNameSafe(
+      route.state as NavigationState | PartialState<NavigationState>,
+    )
+  return typeof route.name === 'string' ? route.name : undefined
+}
