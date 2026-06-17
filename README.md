@@ -38,6 +38,10 @@ Convert the `uix-design` demo screens into real React Native screens in `client/
 
 Your job is to implement the real screens in the client so the mobile app matches the demo.
 
+👉 **Start here: [BUILD_GUIDE.md](BUILD_GUIDE.md)** — step-by-step instructions for reusing the
+design system, tokens, theme, and UI Kit so the app looks and behaves exactly like the demo,
+including token/component mapping tables and a per-screen Definition of Done.
+
 ### Ground rules (see `client/AGENTS.md` for the full list)
 
 1. **Tokens only** for styling — no raw hex/rgb, no magic spacing/size/radius values.
