@@ -6,6 +6,13 @@ This repository contains the DriveShield **mobile frontend** and its **design re
 current goal is to **convert the design demo into the React Native app** — building real screens
 on top of the existing foundation (theme tokens, UI kit, navigation shell).
 
+> **Built on:** the React Native app in `client/DriveShield` is built on top of the
+> [**react-native-bare-starter**](https://github.com/maximcoding/react-native-bare-starter)
+> template (bare RN 0.82, TypeScript, React Navigation 7, TanStack Query, Zustand, MMKV,
+> offline-ready transport, theming, i18next, Biome/Jest). Extend that foundation — do not rebuild
+> theme, navigation, state, or folder structure from scratch. See the starter's README for the
+> full architecture and conventions.
+
 ## Repository layout
 
 ```
